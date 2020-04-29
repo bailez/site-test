@@ -11,6 +11,7 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+#detail functions
 def detail(request, question_id):
     try:
         question = Question.objects.get(pk=question_id)
